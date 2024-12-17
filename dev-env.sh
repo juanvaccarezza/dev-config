@@ -29,7 +29,7 @@ log "DEV_ENV_HOME: $DEV_ENV_HOME"
 log "XDG_CONFIG_HOME $XDG_CONFIG_HOME"
 
 update_files() {
-  log "copying over files from: $1"
+  log "copying over files from: $1 to $2"
   pushd $1 &>/dev/null
   (
     configs=$(find . -mindepth 1 -maxdepth 1 -type d)
@@ -41,9 +41,9 @@ update_files() {
         rm -rf $directory
       fi
 
-      log "    copying env: cp $c $2"
+      log "    copying env: cp $PWD./$c $2"
       if [[ $dry_run == "0" ]]; then
-        cp -r ./$c $2
+        cp -r $c $2
       fi
     done
 
@@ -62,8 +62,8 @@ copy() {
   fi
 }
 
-#update_files $DEV_ENV_HOME/env/.config $XDG_CONFIG_HOME
-#update_files $DEV_ENV_HOME/env/.local $HOME/.local
+update_files $DEV_ENV_HOME/.config $XDG_CONFIG_HOME
+
 #
 #copy $DEV_ENV_HOME/tmux-sessionizer/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
 #copy $DEV_ENV_HOME/env/.zsh_profile $HOME/.zsh_profile

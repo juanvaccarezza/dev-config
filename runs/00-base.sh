@@ -5,4 +5,6 @@ sudo apt update
 sudo apt install -y \
   git \
   ripgrep \
-  fontconfig
+  fontconfig \
+  fzf \
+  fd-find

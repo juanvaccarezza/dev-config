@@ -35,15 +35,15 @@ update_files() {
     configs=$(find . -mindepth 1 -maxdepth 1 -type d)
     for c in $configs; do
       directory=${2%/}/${c#./}
-      log "    removing: rm -rf $directory"
+      # log "    removing: rm -rf $directory"
+      #
+      # if [[ $dry_run == "0" ]]; then
+      #   rm -rf $directory
+      # fi
 
+      log "    copying env: cp $c $2"
       if [[ $dry_run == "0" ]]; then
-        rm -rf $directory
-      fi
-
-      log "    copying env: cp $PWD./$c $2"
-      if [[ $dry_run == "0" ]]; then
-        cp -r $c $2
+        cp -rf $c $2
       fi
     done
 
@@ -63,6 +63,9 @@ copy() {
 }
 
 update_files $DEV_ENV_HOME/.config $XDG_CONFIG_HOME
+update_files $DEV_ENV_HOME/.local $HOME/.local
+
+fc-cache -f -v
 
 #
 #copy $DEV_ENV_HOME/tmux-sessionizer/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer

@@ -7,4 +7,5 @@ sudo apt install -y \
   ripgrep \
   fontconfig \
   fzf \
-  fd-find
+  fd-find \
+  curl

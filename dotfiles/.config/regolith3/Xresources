@@ -1,0 +1,11 @@
+## Launch // Display Settings // <><Shift> d ##
+wm.binding.display: Shift+d
+
+## Launch // Application // <> d  ##
+wm.binding.launcher.app: d
+
+## Navigate // Window by Name // <><Ctrl> d ##
+wm.binding.launcher.window: Ctrl+d 
+
+## bar on top
+wm.bar.position: top

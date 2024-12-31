@@ -10,4 +10,7 @@ sudo apt install -y \
   fd-find \
   curl \
   nodejs \
-  npm
+  npm \
+  python3-pip \
+  python-is-python3 \
+  pipx

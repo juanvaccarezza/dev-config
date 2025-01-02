@@ -8,4 +8,5 @@ sudo apt install -y \
   fontconfig \
   fzf \
   fd-find \
-  curl
+  curl \
+  taskwarrior

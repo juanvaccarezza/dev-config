@@ -13,5 +13,4 @@ sudo apt install -y \
   npm \
   python3-pip \
   python-is-python3 \
-  pipx \
-  taskwarrior
+  pipx

@@ -1,0 +1,42 @@
+# [Created by task 3.2.0 11/13/2024 08:53:06]
+data.location=~/datos/task
+#news.version=3.2.0
+
+# To use the default location of the XDG directories,
+# move this configuration file from ~/.taskrc to ~/.config/task/taskrc and update location config as follows:
+
+#data.location=~/.local/share/task
+#hooks.location=~/.config/task/hooks
+
+# Color theme (uncomment one to use)
+#include light-16.theme
+#include light-256.theme
+#include bubblegum-256.theme
+#include dark-16.theme
+#include dark-256.theme
+#include dark-red-256.theme
+#include dark-green-256.theme
+#include dark-blue-256.theme
+#include dark-violets-256.theme
+#include dark-yellow-green.theme
+#include dark-gray-256.theme
+#include dark-gray-blue-256.theme
+#include solarized-dark-256.theme
+#include solarized-light-256.theme
+#include no-color.theme
+
+uda.external_id.type=string
+uda.external_id.label=ext_id
+
+uda.source.type=string
+uda.source.label=source
+uda.external_url.label=external_url
+uda.external_url.type=string
+
+report.simple.description=Simple list of open tasks by project
+report.simple.columns=id,project,source,description.count
+report.simple.labels=ID,Proj,Source,Desc
+report.simple.sort=project+\/,source+,entry+
+report.simple.filter=status:pending
+
+editor=nvim

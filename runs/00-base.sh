@@ -9,4 +9,9 @@ sudo apt install -y \
   fzf \
   fd-find \
   curl \
+  nodejs \
+  npm \
+  python3-pip \
+  python-is-python3 \
+  pipx \
   taskwarrior

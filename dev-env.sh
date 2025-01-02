@@ -67,10 +67,10 @@ update_files $DEV_ENV_HOME/.local $HOME/.local
 
 fc-cache -f -v
 
-#
+copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
+
 #copy $DEV_ENV_HOME/tmux-sessionizer/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
 #copy $DEV_ENV_HOME/env/.zsh_profile $HOME/.zsh_profile
-#copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
 #copy $DEV_ENV_HOME/env/.xprofile $HOME/.xprofile
 #copy $DEV_ENV_HOME/env/.tmux-sessionizer $HOME/.tmux-sessionizer
 #copy $DEV_ENV_HOME/dev-env $HOME/.local/bin/dev-env

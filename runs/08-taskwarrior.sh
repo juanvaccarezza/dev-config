@@ -20,7 +20,7 @@ git -C ~/git/taskwarrior fetch --all
 git -C ~/git/taskwarrior checkout $version
 
 pushd ~/git/taskwarrior
-cmake -S . -B build CMAKE_BUILD_TYPE=RelWithDebInfo
+CMAKE_BUILD_TYPE=RelWithDebInfo cmake -S . -B build 
 cmake --build build
 sudo cmake --install build
 popd

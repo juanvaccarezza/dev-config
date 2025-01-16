@@ -1,0 +1,18 @@
+# NOTEBOOK SETTINGS
+[notebook]
+dir = "~/datos/zk"
+
+template = "default.md"
+
+[group.minutes]
+paths = ["minutes"]
+
+[group.minutes.note]
+extension = "md"
+template = "minutes.md"
+
+[alias]
+ls = "zk list $@"
+ed = "zk edit $@"
+n = "zk new $@"
+min = 'zk new --no-input --no-input "$ZK_NOTEBOOK_DIR/minutes"'

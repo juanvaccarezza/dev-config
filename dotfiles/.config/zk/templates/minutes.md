@@ -1,5 +1,5 @@
 --- 
-title: Meet {{title}}
+title: {{title}}
 date: {{format-date now "%d-%m-%Y"}} 
 tags: minutes minutas
 --- 

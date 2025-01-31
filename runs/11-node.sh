@@ -2,7 +2,6 @@
 
 set -e
 
-sudo apt update
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
-sudo apt install nodejs
-sudo apt install npm
+nvm install node

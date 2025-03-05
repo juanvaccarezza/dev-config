@@ -1,0 +1,17 @@
+services:
+  ide:
+    build:  
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:?Please complete it in .env}
+    image: ${ENV_NAME} 
+    user: ${MY_UID}:${MY_GID}
+    container_name: ${CONTAINER_NAME}
+    command: /bin/bash
+    tty: true 
+    stdin_open: true 
+    volumes:
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - ${WORKSPACE:-${PWD}}:/workspace
+      - ${HOME}:${HOME}

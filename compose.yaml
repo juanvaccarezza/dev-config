@@ -14,4 +14,8 @@ services:
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
       - ${WORKSPACE:-${PWD}}:/workspace
-      - ${HOME}:${HOME}
+      - ${HOME}/.config/nvim:${HOME}/.config/nvim:rw
+      - ${HOME}/.local/share/nvim:${HOME}/.local/share/nvim:rw
+      - ${HOME}/.local/state/nvim:${HOME}/.local/state/nvim:rw
+      - ${HOME}/.cache/nvim:${HOME}/.cache/nvim:rw
+      - ${HOME}/.local/share/fonts:${HOME}/.local/share/fonts:ro

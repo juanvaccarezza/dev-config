@@ -8,9 +8,7 @@ WORKDIR /config
 RUN apt-get update && apt-get install -y sudo
 
 
-COPY dotfiles dotfiles
 COPY runs runs 
-COPY dev-env.sh  dev-env.sh
 COPY run.sh run.sh
 
 RUN chmod -x runs/* && \

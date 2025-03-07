@@ -7,7 +7,7 @@ services:
     image: ${ENV_NAME} 
     user: ${MY_UID}:${MY_GID}
     container_name: ${CONTAINER_NAME}
-    command: /bin/bash
+    command: tmux -u 
     tty: true 
     stdin_open: true 
     volumes:
@@ -19,3 +19,6 @@ services:
       - ${HOME}/.local/state/nvim:${HOME}/.local/state/nvim:rw
       - ${HOME}/.cache/nvim:${HOME}/.cache/nvim:rw
       - ${HOME}/.local/share/fonts:${HOME}/.local/share/fonts:ro
+      - ${HOME}/.tmux:${HOME}/.tmux:rw
+      - ${HOME}/.config/tmux:${HOME}/.config/tmux:rw
+      - ${HOME}/.config/tmux:${HOME}/.config/tmux:rw

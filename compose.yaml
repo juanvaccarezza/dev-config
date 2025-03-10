@@ -23,5 +23,8 @@ services:
       - ${HOME}/.local/share/nvim:/home/${MY_UNAME}/.local/share/nvim:rw
       - ${HOME}/.local/state/nvim:/home/${MY_UNAME}/.local/state/nvim:rw
       - ${HOME}/.cache/nvim:/home/${MY_UNAME}/.cache/nvim:rw
+      - ${HOME}/.local/state/lazygit:/home/${MY_UNAME}/.local/state/lazygit:rw
+      - ${HOME}/.config/lazygit:/home/${MY_UNAME}/.config/lazygit:rw
       - ${HOME}/.local/share/fonts:/home/${MY_UNAME}/.local/share/fonts:ro
       - ${HOME}/.ssh:/home/${MY_UNAME}/.ssh:ro
+      - ${HOME}/.gitconfig:/home/${MY_UNAME}/.gitconfig:ro

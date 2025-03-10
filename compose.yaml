@@ -4,21 +4,24 @@ services:
       context: .
       args:
         BASE_IMAGE: ${BASE_IMAGE:?Please complete it in .env}
+        USER_ID: ${MY_UID:?Please complete it in .env}
+        USER_NAME: ${MY_UNAME:?Please complete it in .env}
+        GROUP_ID: ${MY_GID:?Please complete it in .env}
     image: ${ENV_NAME} 
-    user: ${MY_UID}:${MY_GID}
-    container_name: ${CONTAINER_NAME}
-    command: tmux -u 
+    user: ${MY_UID}:${MY_UID}
+    container_name: ${CONTAINER_NAME:?Please complete it in .env}
+    command: /bin/bash 
     tty: true 
     stdin_open: true 
+    environment:
+      - CARGO_HOME=/workspace
     volumes:
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
       - ${WORKSPACE:-${PWD}}:/workspace
-      - ${HOME}/.config/nvim:${HOME}/.config/nvim:rw
-      - ${HOME}/.local/share/nvim:${HOME}/.local/share/nvim:rw
-      - ${HOME}/.local/state/nvim:${HOME}/.local/state/nvim:rw
-      - ${HOME}/.cache/nvim:${HOME}/.cache/nvim:rw
-      - ${HOME}/.local/share/fonts:${HOME}/.local/share/fonts:ro
-      - ${HOME}/.tmux:${HOME}/.tmux:rw
-      - ${HOME}/.config/tmux:${HOME}/.config/tmux:rw
-      - ${HOME}/.config/tmux:${HOME}/.config/tmux:rw
+      - ${HOME}/.config/nvim:/home/${MY_UNAME}/.config/nvim:rw
+      - ${HOME}/.local/share/nvim:/home/${MY_UNAME}/.local/share/nvim:rw
+      - ${HOME}/.local/state/nvim:/home/${MY_UNAME}/.local/state/nvim:rw
+      - ${HOME}/.cache/nvim:/home/${MY_UNAME}/.cache/nvim:rw
+      - ${HOME}/.local/share/fonts:/home/${MY_UNAME}/.local/share/fonts:ro
+      - ${HOME}/.ssh:/home/${MY_UNAME}/.ssh:ro

@@ -52,3 +52,4 @@ RUN rustup component add rust-analyzer
 RUN rustup component add rust-src
 
 
+WORKDIR /workspace

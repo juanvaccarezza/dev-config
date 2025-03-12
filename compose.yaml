@@ -7,6 +7,9 @@ services:
         USER_ID: ${MY_UID:?Please complete it in .env}
         USER_NAME: ${MY_UNAME:?Please complete it in .env}
         GROUP_ID: ${MY_GID:?Please complete it in .env}
+        # HTTP_PROXY:  "http://125.1.1.122:3128"
+        # HTTPS_PROXY: "http://125.1.1.122:3128"
+        # NO_PROXY: "localhost,docker,127.0.0.1,.invap.com.ar"
     image: ${ENV_NAME} 
     user: ${MY_UID}:${MY_UID}
     container_name: ${CONTAINER_NAME:?Please complete it in .env}
@@ -15,6 +18,11 @@ services:
     stdin_open: true 
     environment:
       - CARGO_HOME=/workspace
+      # - HTTP_PROXY=http://125.1.1.122:3128
+      # - HTTPS_PROXY=http://125.1.1.122:3128
+      # - http_proxy=http://125.1.1.122:3128
+      # - https_proxy=http://125.1.1.122:3128
+      # - no_proxy=localhost,docker,127.0.0.1,.invap.com.ar
     volumes:
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro

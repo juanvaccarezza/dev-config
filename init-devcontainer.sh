@@ -14,8 +14,6 @@ FINAL_DESTINATION=$DESTINATION
 
 mkdir $FINAL_DESTINATION
 
-cp ${script_dir}/runs $FINAL_DESTINATION -r
 cp $script_dir/Dockerfile $FINAL_DESTINATION
 cp $script_dir/compose.yaml $FINAL_DESTINATION
-cp $script_dir/run.sh $FINAL_DESTINATION
 cp $script_dir/.env $FINAL_DESTINATION

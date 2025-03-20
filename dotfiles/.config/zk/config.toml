@@ -7,6 +7,9 @@ template = "default.md"
 [group.minutes]
 paths = ["minutes"]
 
+[tool]
+shell = "/bin/bash"
+
 [group.minutes.note]
 extension = "md"
 template = "minutes.md"

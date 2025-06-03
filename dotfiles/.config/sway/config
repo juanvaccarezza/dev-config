@@ -77,6 +77,9 @@ exec swayidle -w \
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
+#This will split layouts 
+exec --no-startup-id ~/.config/sway/alternating_layouts.py
+
 ### Input configuration
 #
 # Example configuration:

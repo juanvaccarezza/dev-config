@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="v0.10.2"
+version="v0.11.2"
 
 if [ ! -z $NVIM_VERSION ]; then
   version="$NVIM_VERSION"

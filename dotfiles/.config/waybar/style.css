@@ -47,10 +47,6 @@ window#waybar {
 	text-shadow: inherit;
 }
 #workspaces button:hover {
-	/*background: #1a1a1a;*/
-  background: @background;
-	/*border: #1a1a1a;*/
-	padding: 0 3px;
 }
 
 #pulseaudio {

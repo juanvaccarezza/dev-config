@@ -1,5 +1,5 @@
-@define-color general_background rgba(0,0,0,0.0);
-@define-color background rgba(0,0,0,0.5);
+@define-color general_background rgba(0,0,0,0.5);
+@define-color background rgba(0,0,0,0.0);
 
 * {
 	font-size: 12px;

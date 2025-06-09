@@ -45,9 +45,12 @@ set $term ~/.local/kitty.app/bin/kitty
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # # Application launcher with fzf
 set $menu exec $term --class=launcher -e bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'
+
 # # Windows config
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8 , resize set width 80 ppt, resize set height 80 ppt
 
+for_window [app_id="^pavucontrol$"] floating enable, resize set width 80 ppt, resize set height 80 ppt
+for_window [app_id="^wdisplays$"] floating enable, resize set width 80 ppt, resize set height 80 ppt
 
 include /etc/sway/config-vars.d/*
 

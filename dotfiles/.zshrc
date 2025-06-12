@@ -74,6 +74,7 @@ ZSH_THEME="avit"
 # Add wisely, as too many plugins slow down shell startup.
 #
 zstyle ':omz:plugins:eza' 'icons' yes
+zstyle ':omz:plugins:eza' 'dirs-first' yes
 plugins=(git fzf z eza zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
